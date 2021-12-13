@@ -3,7 +3,8 @@ import os
 
 os.system("clear")
 
-print("""
+print(
+    """
   _   _                 _                  _____                     _             
  | \ | |               | |                / ____|                   (_)            
  |  \| |_   _ _ __ ___ | |__   ___ _ __  | |  __ _   _  ___  ___ ___ _ _ __   __ _ 
@@ -16,13 +17,17 @@ print("""
 """
 )
 
-level = int(input("""
+level = int(
+    input(
+        """
 Enter the level you want to play
     [1.] Easy -> 10 attempts, number between 1 and 30.
     [2.] Medium -> 7 attempts, number between 1 and 40.
     [3.] Hard -> 5 attempts, number between 1 and 50.
     [4.] Custom mode -> Your choice of attempts, your choice of numbers.
-Chloce: """))
+Chloce: """
+    )
+)
 
 i = 1
 
@@ -57,20 +62,20 @@ elif level == 4:
 else:
     print("Error 404")
 
-a = randint(c,b)
+a = randint(c, b)
 
 while True:
     g = int(input(f"Guess a number between {c} and {b}: "))
     if g > a:
         print("Too high")
-        i = i+1
+        i = i + 1
         ip = ip - 1
         print(f"You have {ip} attempts left.")
         if ip == 0:
             print("All attempts finished")
     elif a > g:
         print("Too low")
-        i = i+1
+        i = i + 1
         ip = ip - 1
         print(f"You have {ip} attempts left.")
         if ip == 0:
@@ -81,7 +86,7 @@ while True:
         break
     elif g > b:
         print(f"Pls only choose a number between {c} and {b}")
-        i = i+1
+        i = i + 1
         ip = ip - 1
         print(f"You have {ip} attempts left.")
         if ip == 0:
@@ -89,4 +94,3 @@ while True:
 
     else:
         print("Error")
-
